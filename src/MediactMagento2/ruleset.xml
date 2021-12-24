@@ -1,46 +1,11 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Copyright MediaCT. All rights reserved.
- * https://www.mediact.nl
+ * Copyright Youwe. All rights reserved.
+ * https://www.youweagency.com
  */
 -->
 <ruleset name="Mediact/Magento2">
-    <description>MediaCT coding standards for Magento2.</description>
-    <arg name="colors" />
-    <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />
-
-    <!-- Base rules on MediaCT -->
-    <rule ref="../../../coding-standard/src/MediactCommon">
-        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
-        <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
-        <exclude name="MediactCommon.Php7.ReturnType" />
-        <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
-        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
-        <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
-    </rule>
-
-    <rule ref="Generic.Files.LineLength.TooLong">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-    <rule ref="Squiz.ControlStructures.ControlSignature">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" >
-        <properties>
-            <property name="spacingBeforeFirst" value="0"/>
-        </properties>
-    </rule>
-
-    <rule ref="PSR12.Functions.ReturnTypeDeclaration" />
+    <description>Mediact coding standards for Magento2 is deprecated please use Magento2.</description>
+    <rule ref="../Magento2"/>
 </ruleset>
