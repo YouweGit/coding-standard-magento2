@@ -8,3 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Vendor from MediactMagento2 to Mangento2
 - Copyrights.
+
+### Removed
+- Dependency squizlabs/php_codesniffer.
