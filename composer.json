@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "mediact/coding-standard": "dev-feature/OTPBBBBBZP-117"
+        "youwe/coding-standard": "dev-master"
     },
     "repositories": [
         {
@@ -21,7 +21,8 @@
     ],
     "autoload": {
         "psr-0": {
-            "MediactMagento2": "src/MediactMagento2"
+            "MediactMagento2": "src/MediactMagento2",
+            "Magento2": "src/Magento2"
         }
     }
 }
