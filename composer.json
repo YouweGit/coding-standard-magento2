@@ -1,22 +1,28 @@
 {
-  "name": "mediact/coding-standard-magento2",
-  "description": "MediaCT PHP Coding Standard for Magento2",
-  "type": "phpcs-sniffs",
-  "homepage": "https://bitbucket.org/mediactbv/coding-standard-magento2",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "MediaCT",
-      "email": "contact@mediact.nl"
+    "name": "youwe/coding-standard-magento2",
+    "description": "Youwe PHP Coding Standard for Magento2",
+    "type": "phpcs-sniffs",
+    "homepage": "https://github.com/YouweGit/coding-standard-magento2",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Youwe",
+            "email": "support@youweagency.com"
+        }
+    ],
+    "require": {
+        "youwe/coding-standard": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/YouweGit/coding-standard"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "MediactMagento2": "src/MediactMagento2",
+            "Magento2": "src/Magento2"
+        }
     }
-  ],
-  "require": {
-    "mediact/coding-standard": "^3.0",
-    "squizlabs/php_codesniffer": "^3.5"
-  },
-  "autoload": {
-    "psr-0": {
-      "MediactMagento2": "src/MediactMagento2"
-    }
-  }
 }
