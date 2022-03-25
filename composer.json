@@ -6,19 +6,13 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Youwe",
+            "name": "Youwe B.V.",
             "email": "info@youweagency.com"
         }
     ],
     "require": {
-        "youwe/coding-standard": "dev-master"
+        "youwe/coding-standard": "~3.3.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/YouweGit/coding-standard"
-        }
-    ],
     "autoload": {
         "psr-0": {
             "MediactMagento2": "src/MediactMagento2",
