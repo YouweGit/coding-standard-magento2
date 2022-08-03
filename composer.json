@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "youwe/coding-standard": "~3.3.0"
+        "youwe/coding-standard": ">=3.3.0"
     },
     "autoload": {
         "psr-0": {
