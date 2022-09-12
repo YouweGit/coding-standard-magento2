@@ -7,5 +7,5 @@
 -->
 <ruleset name="Mediact/Magento2">
     <description>Mediact coding standards for Magento2 is deprecated please use Magento2.</description>
-    <rule ref="../Magento2"/>
+    <rule ref="../YouweMagento2"/>
 </ruleset>

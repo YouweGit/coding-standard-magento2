@@ -5,7 +5,7 @@
  * https://www.youweagency.com
  */
 -->
-<ruleset name="Magento2">
+<ruleset name="YouweMagento2">
     <description>Youwe coding standards for Magento2.</description>
     <arg name="colors" />
     <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />

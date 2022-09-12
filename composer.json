@@ -16,7 +16,7 @@
     "autoload": {
         "psr-0": {
             "MediactMagento2": "src/MediactMagento2",
-            "Magento2": "src/Magento2"
+            "YouweMagento2": "src/YouweMagento2"
         }
     }
 }

@@ -18,7 +18,7 @@ root of the project.
 ```xml
 <?xml version="1.0"?>
 <ruleset>
-    <rule ref="./vendor/youwe/coding-standard-magento2/src/Magento2"/>
+    <rule ref="./vendor/youwe/coding-standard-magento2/src/YouweMagento2"/>
 </ruleset>
 ```
 
