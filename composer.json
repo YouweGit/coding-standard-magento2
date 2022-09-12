@@ -1,15 +1,15 @@
 {
     "name": "youwe/coding-standard-magento2",
     "description": "Youwe PHP Coding Standard for Magento2",
-    "type": "phpcs-sniffs",
-    "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "license": "proprietary",
+    "type": "phpcs-sniffs",
     "authors": [
         {
             "name": "Youwe B.V.",
             "email": "info@youweagency.com"
         }
     ],
+    "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "require": {
         "magento/magento-coding-standard": "*",
         "youwe/coding-standard": "^3.3.0"
