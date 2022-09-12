@@ -1,7 +1,7 @@
 # Introduction
 
 This is the Youwe coding standard for Magento 2 projects. It is based on
-the default Youwe coding standard but some tests have been removed to create
+the default Magento2 coding standard but some tests have been removed to create
 a workable and fast standard.
 
 # Installation
