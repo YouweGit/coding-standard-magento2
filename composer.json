@@ -1,22 +1,33 @@
 {
     "name": "youwe/coding-standard-magento2",
     "description": "Youwe PHP Coding Standard for Magento2",
-    "type": "phpcs-sniffs",
-    "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "license": "proprietary",
+    "type": "phpcs-sniffs",
     "authors": [
         {
             "name": "Youwe B.V.",
             "email": "info@youweagency.com"
         }
     ],
+    "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "require": {
-        "youwe/coding-standard": ">=3.3.0"
+        "magento/magento-coding-standard": "*",
+        "youwe/coding-standard": "^3.5.0"
     },
     "autoload": {
         "psr-0": {
-            "MediactMagento2": "src/MediactMagento2",
-            "Magento2": "src/Magento2"
+            "YouweMagento2": "src/YouweMagento2"
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@phpcs-set-paths"
+        ],
+        "post-update-cmd": [
+            "@phpcs-set-paths"
+        ],
+        "phpcs-set-paths": [
+            "vendor/bin/phpcs --config-set installed_paths src/,../../magento/magento-coding-standard/,../../phpcompatibility/php-compatibility/"
+        ]
     }
 }

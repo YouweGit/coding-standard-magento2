@@ -5,23 +5,30 @@
  * https://www.youweagency.com
  */
 -->
-<ruleset name="Magento2">
-    <description>Youwe coding standards for Magento2.</description>
+<ruleset name="YouweMagento2">
+    <description>Youwe coding standards for Magento2 websites and modules</description>
+
     <arg name="colors" />
     <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />
 
     <!-- Base rules on Youwe -->
-    <rule ref="../../../coding-standard/src/GlobalCommon">
-        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
-        <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+    <rule ref="Youwe">
         <exclude name="GlobalCommon.Php7.ReturnType" />
-        <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
         <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
         <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
+        <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+        <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
+    </rule>
+
+    <!-- Import most rules from official Magento2 coding standard -->
+    <rule ref="Magento2">
+        <exclude name="Magento2.Annotation" />
+        <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting" />
     </rule>
 
     <rule ref="Generic.Files.LineLength.TooLong">
-        <exclude-pattern>*.phtml</exclude-pattern>
+        <exclude-pattern>*.phtml,*.xml</exclude-pattern>
     </rule>
 
     <rule ref="Squiz.ControlStructures.ControlSignature">
