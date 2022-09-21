@@ -27,7 +27,7 @@
             "@phpcs-set-paths"
         ],
         "phpcs-set-paths": [
-            "vendor/bin/phpcs --config-set installed_paths src/,../../magento/magento-coding-standard/,../../phpcompatibility/php-compatibility/"
+            "vendor/bin/phpcs --config-set installed_paths ../../youwe/coding-standard/src/,../../youwe/coding-standard-magento2/src/,../../magento/magento-coding-standard/,../../phpcompatibility/php-compatibility/"
         ]
     }
 }
