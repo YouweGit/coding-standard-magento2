@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Rule PSR2.Methods.MethodDeclaration.Underscore since this is already excluded by Magento.
 - Argument colors and added it in the common Youwe coding standards.
+- Old coding ruleset directories and migrated them to YouweMagento2.
 
 ## 1.7.0 - 2021-12-24
 ### Changed
