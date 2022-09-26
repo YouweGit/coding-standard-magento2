@@ -3,47 +3,100 @@
 /**
  * Copyright Youwe. All rights reserved.
  * https://www.youweagency.com
+ *
+ * TODO:: Create a separate ruleset for phtml files, since a lot of exceptions need to be made just for adding phtml to code sniffer.
  */
 -->
 <ruleset name="YouweMagento2">
     <description>Youwe coding standards for Magento2 websites and modules</description>
-
-    <arg name="colors" />
-    <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />
+    <!-- TODO:: Check if these values are correct. Did not see anything about how to configure this in documentation -->
+    <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS,xml/XML,less/CSS" />
 
     <!-- Base rules on Youwe -->
     <rule ref="Youwe">
+        <!-- Magento 2 does not use return types everywhere in the code base yet. So we cannot make this mandatory. -->
         <exclude name="GlobalCommon.Php7.ReturnType" />
-        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+        <!-- Magento 2 still uses $_ to tell if it's protected, so we cannot mandate this. -->
+        <exclude name="GlobalCommon.NamingConventions.ValidVariableName" />
+        <!-- TODO:: Check if this rule still needs to be excluded. Seems logical that all classes should start with camelcase -->
         <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+        <!--TODO:: Check if this should not be excluded. Seems logical to add throws in function comment. -->
         <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
+        <!-- Magento 2 still does not strict type arguments of functions. This is why this rule is excluded. -->
         <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+        <!-- Magento 2 still does not strict type arguments of functions. This is why this rule is excluded. -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
     </rule>
 
     <!-- Import most rules from official Magento2 coding standard -->
     <rule ref="Magento2">
+        <!-- Excluded because short descriptions are not mandatory in Youwe for a method. -->
         <exclude name="Magento2.Annotation" />
+        <!--
+        Excluded because in PHP 8.1 it's already possible to declare what type it is.
+        Also most class properties are self-explanatory.
+        -->
         <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting" />
     </rule>
 
-    <rule ref="Generic.Files.LineLength.TooLong">
-        <exclude-pattern>*.phtml,*.xml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.ControlStructures.ControlSignature">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
+    <!-- Detects function that use a for-loops call in their function. -->
     <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
         <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 
+    <rule ref="Generic.Commenting.DocComment">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
+        <!-- Magento 2 templates do not cohere to this rule. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <!-- Magento 2 phtml & xml both have long lines think of checkout_index_index.xml -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+        <exclude-pattern>*.xml</exclude-pattern>
+    </rule>
+
+    <rule ref="PEAR.Functions.FunctionCallSignature">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
     <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
+        <!-- In some cases Magento 2 still uses underscores for their properties. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR2.ControlStructures.ControlStructureSpacing">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR12.ControlStructures.ControlStructureSpacing">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR12.Files.FileHeader.SpacingAfterBlock">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR12.Operators.OperatorSpacing">
+        <!-- default Magento 2 templates also not cohere to this. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.ControlStructures.ControlSignature">
+        <!-- Magento 2 uses a different notation for patterns like do { / if {  for phtml that's why this was excluded. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
+        <!-- default Magento 2 templates also not cohere to this. -->
         <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 
@@ -53,5 +106,8 @@
         </properties>
     </rule>
 
-    <rule ref="PSR12.Functions.ReturnTypeDeclaration" />
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
+        <!-- Magento 2 phptml files end differently and use endif; for example. -->
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
 </ruleset>

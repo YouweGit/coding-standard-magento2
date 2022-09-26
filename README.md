@@ -9,7 +9,7 @@ a workable and fast standard.
 Use composer to require the standard in a project.
 
 ```shell
-composer require --dev youwe/coding-standard-magento2
+composer require --dev youwe/coding-standard-magento2 -W
 ```
 
 To let PHPCS know that this standard should be used add a phpcs.xml file in the
@@ -18,7 +18,7 @@ root of the project.
 ```xml
 <?xml version="1.0"?>
 <ruleset>
-    <rule ref="./vendor/youwe/coding-standard-magento2/src/YouweMagento2"/>
+    <rule ref="YouweMagento2"/>
 </ruleset>
 ```
 
