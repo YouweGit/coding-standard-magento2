@@ -2,7 +2,7 @@
     "name": "youwe/coding-standard-magento2",
     "description": "Youwe PHP Coding Standard for Magento2",
     "license": "proprietary",
-    "type": "phpcs-sniffs",
+    "type": "phpcodesniffer-standard",
     "authors": [
         {
             "name": "Youwe B.V.",
@@ -12,7 +12,7 @@
     "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "require": {
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
-        "magento/magento-coding-standard": "*",
+        "magento/magento-coding-standard": ">= 9",
         "youwe/coding-standard": "^3.5.0"
     },
     "autoload": {
