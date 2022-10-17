@@ -39,4 +39,10 @@
         -->
         <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting" />
     </rule>
+
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" >
+        <properties>
+            <property name="spacingBeforeFirst" value="0"/>
+        </properties>
+    </rule>
 </ruleset>
