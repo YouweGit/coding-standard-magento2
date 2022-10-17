@@ -26,6 +26,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
         <!-- Magento 2 still does not strict type arguments of functions. This is why this rule is excluded. -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 
     <!-- Import most rules from official Magento2 coding standard -->
@@ -37,77 +38,5 @@
         Also most class properties are self-explanatory.
         -->
         <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting" />
-    </rule>
-
-    <!-- Detects function that use a for-loops call in their function. -->
-    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Generic.Commenting.DocComment">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
-        <!-- Magento 2 templates do not cohere to this rule. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Generic.Files.LineLength.TooLong">
-        <!-- Magento 2 phtml & xml both have long lines think of checkout_index_index.xml -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-        <exclude-pattern>*.xml</exclude-pattern>
-    </rule>
-
-    <rule ref="PEAR.Functions.FunctionCallSignature">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
-        <!-- In some cases Magento 2 still uses underscores for their properties. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR2.ControlStructures.ControlStructureSpacing">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR12.ControlStructures.ControlStructureSpacing">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR12.Files.FileHeader.SpacingAfterBlock">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="PSR12.Operators.OperatorSpacing">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.ControlStructures.ControlSignature">
-        <!-- Magento 2 uses a different notation for patterns like do { / if {  for phtml that's why this was excluded. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
-        <!-- default Magento 2 templates also not cohere to this. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-
-    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" >
-        <properties>
-            <property name="spacingBeforeFirst" value="0"/>
-        </properties>
-    </rule>
-
-    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
-        <!-- Magento 2 phptml files end differently and use endif; for example. -->
-        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 </ruleset>
