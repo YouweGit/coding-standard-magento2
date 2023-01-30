@@ -11,7 +11,7 @@
     ],
     "homepage": "https://github.com/YouweGit/coding-standard-magento2",
     "require": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2 || ^1.0",
         "magento/magento-coding-standard": ">= 9",
         "youwe/coding-standard": "^3.5.0"
     },
