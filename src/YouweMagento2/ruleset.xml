@@ -38,6 +38,10 @@
         Also most class properties are self-explanatory.
         -->
         <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting" />
+
+        <!-- While we wait for https://github.com/magento/magento-coding-standard/pull/416 to be merged -->
+        <!-- See also https://github.com/YouweGit/coding-standard-magento2/issues/6 -->
+        <exclude name="PSR2.ControlStructures.ControlStructureSpacing" />
     </rule>
 
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing" >
