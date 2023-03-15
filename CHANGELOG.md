@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 2.1.1
+## 2.1.2
 ### Changed
 - Allow use of stable version of `dealerdirect/phpcodesniffer-composer-installer`
+
+## 2.1.1
+### Fixed
+- Resolve incompatibility with `PSR12.ControlStructures.ControlStructureSpacing` (from the `Youwe` standard) and `PSR2.ControlStructures.ControlStructureSpacing` (from the `Magento2` standard).
+  For details, see https://github.com/YouweGit/coding-standard-magento2/issues/6.
 
 ## 2.1.0
 ### Changed
