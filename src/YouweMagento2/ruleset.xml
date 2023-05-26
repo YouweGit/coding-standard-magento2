@@ -26,7 +26,7 @@
         <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
         <!-- Magento 2 still does not strict type arguments of functions. This is why this rule is excluded. -->
         <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
-        <exclude-pattern>*.phtml</exclude-pattern>
+        <exclude-pattern>*.p?html</exclude-pattern>
     </rule>
 
     <!-- Import most rules from official Magento2 coding standard -->
