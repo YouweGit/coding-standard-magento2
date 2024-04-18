@@ -58,18 +58,19 @@
         template files. We can't use a single <exclude-pattern> directive in the
         <rule ref="Youwe"> block above, as that would also apply to any sniffs
         which are in both standards.
+        And XML files are excluded here too.
     -->
-    <rule ref="Generic.Commenting.DocComment"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Generic.PHP.DisallowAlternativePHPTags"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="PSR12.ControlStructures.BooleanOperatorPlacement"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="PSR12.ControlStructures.ControlStructureSpacing"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="PSR12.Files.DeclareStatement"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="PSR12.Files.FileHeader"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="PSR12.Traits.UseDeclaration"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.Arrays.ArrayDeclaration"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.Commenting.FunctionComment"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.Commenting.FunctionCommentThrowTag"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.Commenting.VariableComment"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"><exclude-pattern>*.p?html</exclude-pattern></rule>
-    <rule ref="Squiz.WhiteSpace.FunctionSpacing"><exclude-pattern>*.p?html</exclude-pattern></rule>
+    <rule ref="Generic.Commenting.DocComment"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Generic.PHP.DisallowAlternativePHPTags"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="PSR12.ControlStructures.BooleanOperatorPlacement"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="PSR12.ControlStructures.ControlStructureSpacing"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="PSR12.Files.DeclareStatement"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="PSR12.Files.FileHeader"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="PSR12.Traits.UseDeclaration"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.Arrays.ArrayDeclaration"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.Commenting.FunctionComment"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.Commenting.VariableComment"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing"><exclude-pattern>*.(x|p?ht)ml$</exclude-pattern></rule>
 </ruleset>
