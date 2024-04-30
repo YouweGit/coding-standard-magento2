@@ -4,8 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2.2.1
+### Fixed
+- Avoid breaking XML files by excluding `PSR12.Operators.OperatorSpacing` from running there.
+
 ## 2.2.0
-## Changed
+### Changed
 - Apply more rules to .html and .phtml files. In previous updates (see pull requests [#5] and [#10]), we excluded these files very widely; this change makes the exclusion more specific and intentional.
 
 [#5]: https://github.com/YouweGit/coding-standard-magento2/pull/5
